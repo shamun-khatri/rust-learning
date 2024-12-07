@@ -1,12 +1,42 @@
-
 fn main() {
     println!("Is the number even or odd?");
     println!("{}", is_even(6));
     println!("{}", fib(10));
+    let string = String::from("Hello, World!");
+    println!("{}", ger_string_length(&string));
+    
+    let mut vec = Vec::new();
+    vec.push(0);
+    vec.push(1);
+    vec.push(2);
+    vec.push(3);
+    vec.push(4);
+    vec.push(5);
+    vec.push(6);
+    vec.push(7);
+    vec.push(8);
+    vec.push(9);
+
+    let evens = even_filter(&vec);
+    println!("elements which are even is {:?}", evens);
+}
+
+fn even_filter(arr: &Vec<i32>)-> Vec<i32> {
+    
+    let mut res: Vec<i32> = Vec::new();
+    for i in 0..arr.len() {
+        if arr[i] % 2 == 0 {
+            res.push(arr[i]);
+        }
+    }
+    return res;
+}
+
+fn ger_string_length(s: &str) -> usize {
+    s.len()
 }
 
 fn fib(num: i32) -> i32 {
-
     let mut first = 0;
     let mut second = 1;
 
@@ -27,9 +57,9 @@ fn fib(num: i32) -> i32 {
 }
 
 fn is_even(num: i32) -> bool {
-   if num % 2 == 0 {
-       return true;
-   } else {
-       return false;
-   }
+    if num % 2 == 0 {
+        return true;
+    } else {
+        return false;
+    }
 }
