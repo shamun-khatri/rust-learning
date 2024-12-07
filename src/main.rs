@@ -5,17 +5,7 @@ fn main() {
     let string = String::from("Hello, World!");
     println!("{}", ger_string_length(&string));
     
-    let mut vec = Vec::new();
-    vec.push(0);
-    vec.push(1);
-    vec.push(2);
-    vec.push(3);
-    vec.push(4);
-    vec.push(5);
-    vec.push(6);
-    vec.push(7);
-    vec.push(8);
-    vec.push(9);
+    let vec = vec![1,2,3,4,5,6,7,8,9];
 
     let evens = even_filter(&vec);
     println!("elements which are even is {:?}", evens);
